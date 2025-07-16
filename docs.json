@@ -31,7 +31,15 @@
           {
             "group": "Blocks",
             "pages": [
-              "blocks/text"
+              "blocks/text",
+              "blocks/heading",
+              "blocks/list",
+              "blocks/code",
+              "blocks/version",
+              "blocks/category",
+              "blocks/divider",
+              "blocks/image",
+              "blocks/video"
             ]
           }
         ]
