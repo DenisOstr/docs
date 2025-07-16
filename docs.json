@@ -27,6 +27,12 @@
               "essentials/custom-domain",
               "essentials/customization"
             ]
+          },
+          {
+            "group": "Blocks",
+            "pages": [
+              "blocks/text"
+            ]
           }
         ]
       },
