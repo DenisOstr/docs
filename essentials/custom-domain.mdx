@@ -1,5 +1,48 @@
 ---
 title: "Custom Domain"
-description: "Description of your new file."
+description: "Connect your own domain to display your changelog at a custom URL instead of the default project.loglybase.com."
 icon: "globe"
 ---
+
+#### What is a Custom Domain?
+
+With **Custom Domains**, you can serve your changelog on a domain you own — like `updates.yourcompany.com` — making it feel fully integrated into your product or website.
+
+This allows for:
+
+- Branded changelog pages
+- Better trust and consistency for your users
+- SEO benefits and custom analytics if needed
+
+#### How to Set Up a Custom Domain
+
+To set up a custom domain:
+
+1. Go to **Settings**
+2. Open the **Project settings** section
+3. Enter your domain (e.g., `changelog.example.com`)
+4. Follow the DNS instructions (CNAME record)
+5. Wait for verification and SSL provisioning
+
+![Custom Domain Dsgn Pn](/images/custom_domain_dsgn.png)
+
+#### DNS Configuration
+
+Depending on your domain provider, you’ll usually need to:
+
+- **Add a CNAME record** pointing to `loglybase.com`
+
+Propagation may take a few minutes to several hours.
+
+#### SSL & Security
+
+Once verified, we automatically issue and renew an SSL certificate for your domain via Let’s Encrypt — no manual setup required.
+
+#### Troubleshooting
+
+If your domain isn’t verifying:
+
+- Double-check DNS propagation using tools like `dnschecker.org`
+- Make sure no conflicting records exist (e.g., other CNAME records)
+- Contact your domain registrar if the record isn’t being accepted
+- Contact us to resolve domain issues
