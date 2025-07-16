@@ -3,9 +3,9 @@
   "theme": "mint",
   "name": "Loglybase",
   "colors": {
-    "primary": "#ffffff",
-    "light": "#000000",
-    "dark": "#ffffff"
+    "primary": "#000000",
+    "light": "#ffffff",
+    "dark": "#000000"
   },
   "favicon": "/favicon.svg",
   "navigation": {
