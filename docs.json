@@ -86,6 +86,11 @@
       "href": "https://loglybase.com/projects"
     }
   },
+  "api": {
+    "playground": {
+      "display": "simple"
+    }
+  },
   "footer": {
     "socials": {}
   }
