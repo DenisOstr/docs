@@ -1,16 +1,13 @@
 {
   "openapi": "3.1.0",
   "info": {
-    "title": "OpenAPI Plant Store",
+    "title": "Loglybase",
     "description": "A sample API that uses a plant store as an example to demonstrate features in the OpenAPI specification",
-    "license": {
-      "name": "MIT"
-    },
     "version": "1.0.0"
   },
   "servers": [
     {
-      "url": "http://sandbox.mintlify.com"
+      "url": "http://loglybase.com/api"
     }
   ],
   "security": [
@@ -19,7 +16,7 @@
     }
   ],
   "paths": {
-    "/plants": {
+    "/project": {
       "get": {
         "description": "Returns all plants from the system that the user has access to",
         "parameters": [
@@ -96,7 +93,9 @@
         }
       }
     },
-    "/plants/{id}": {
+    "/project/{id}": {
+      "get": {},
+      "put": {},
       "delete": {
         "description": "Deletes a single plant based on the ID supplied",
         "parameters": [
