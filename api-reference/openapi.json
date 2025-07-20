@@ -442,12 +442,12 @@
         }
       },
       "NewPost": {
-        "type": "object",
         "required": [
           "title",
           "status",
           "projectCode"
         ],
+        "type": "object",
         "properties": {
           "title": {
             "description": "Title of the changelog post",
@@ -466,7 +466,7 @@
             "type": "string"
           }
         }
-      }
+      },
       "Error": {
         "required": [
           "error",
