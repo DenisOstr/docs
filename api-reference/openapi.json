@@ -38,7 +38,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/Plant"
+                    "$ref": "#/components/schemas/Project"
                   }
                 }
               }
@@ -57,13 +57,13 @@
         }
       },
       "post": {
-        "description": "Creates a new plant in the store",
+        "description": "Creates a new project",
         "requestBody": {
-          "description": "Plant to add to the store",
+          "description": "Project for your product changelog",
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewPlant"
+                "$ref": "#/components/schemas/NewProject"
               }
             }
           },
@@ -71,11 +71,11 @@
         },
         "responses": {
           "200": {
-            "description": "plant response",
+            "description": "The new project response",
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Plant"
+                  "$ref": "#/components/schemas/Project"
                 }
               }
             }
@@ -93,11 +93,11 @@
         }
       }
     },
-    "/project/{id}": {
+    "/project/{code}": {
       "get": {},
       "put": {},
       "delete": {
-        "description": "Deletes a single plant based on the ID supplied",
+        "description": "Deletes a single project based on the code",
         "parameters": [
           {
             "name": "id",
