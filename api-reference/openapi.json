@@ -120,6 +120,17 @@
       },
       "put": {
         "description": "Update a project",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "Unique code of project to update",
+            "required": true,
+            "schema": {
+              "type": "string",
+            }
+          }
+        ],
         "requestBody": {
           "content": {
             "application/json": {
