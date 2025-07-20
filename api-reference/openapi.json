@@ -154,7 +154,7 @@
             "description": "Unique identifier of the project",
             "type": "integer",
             "format": "int64"
-          }
+          },
           "code": {
             "description": "Internal project code",
             "type": "string"
@@ -201,11 +201,13 @@
           },
           "createdAt": {
             "description": "Timestamp when the project was created",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           "updatedAt": {
             "description": "Timestamp when the project was last updated",
             "type": "string",
+            "format": "date-time"
           }
         }
       },
