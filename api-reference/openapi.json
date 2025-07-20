@@ -360,7 +360,7 @@
             "type": "string"
           }
         }
-      }
+      },
       "Error": {
         "required": [
           "error",
