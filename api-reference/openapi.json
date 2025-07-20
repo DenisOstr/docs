@@ -94,7 +94,20 @@
       }
     },
     "/project/{id}": {
-      "get": {},
+      "get": {
+        "description": "",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "Unique code of project to get",
+            "required": true,
+            "schema": {
+              "type": "string",
+            }
+          }
+        ],
+      },
       "put": {},
       "delete": {
         "description": "Deletes a single project based on the code",
@@ -102,11 +115,10 @@
           {
             "name": "id",
             "in": "path",
-            "description": "ID of plant to delete",
+            "description": "Unique code of project to delete",
             "required": true,
             "schema": {
-              "type": "integer",
-              "format": "int64"
+              "type": "string",
             }
           }
         ],
