@@ -383,7 +383,7 @@
           },
           "content": {
             "description": "Structured content (array of editor blocks in JSON format)",
-            "type": "string"
+            "type": "array"
           },
           "createdAt": {
             "description": "Timestamp when the post was created",
