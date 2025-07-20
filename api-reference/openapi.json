@@ -179,7 +179,7 @@
         ],
         "responses": {
           "204": {
-            "description": "Plant deleted",
+            "description": "Project deleted",
             "content": {}
           },
           "400": {
@@ -272,9 +272,118 @@
       }
     },
     "/post/{id}": {
-      "get": {},
-      "put": {},
-      "delete": {}
+      "get": {
+        "description": "Get a single post based on the code",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "Unique code of post to get",
+            "required": true,
+            "schema": {
+              "type": "string",
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "The post response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Post"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        }
+      },
+      "put": {
+        "description": "Update a post",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "Unique code of post to update",
+            "required": true,
+            "schema": {
+              "type": "string",
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateProject"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "The updated post response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Post"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        }
+      },
+      "delete": {
+        "description": "Delete a single post based on the code",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "Unique code of post to delete",
+            "required": true,
+            "schema": {
+              "type": "string",
+            }
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "Post deleted",
+            "content": {}
+          },
+          "400": {
+            "description": "unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        }
+      }
     }
   },
   "components": {
@@ -466,6 +575,13 @@
             "type": "string"
           }
         }
+      },
+      "UpdatePost": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/NewPost"
+          }
+        ]
       },
       "Error": {
         "required": [
