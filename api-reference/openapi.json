@@ -185,7 +185,7 @@
       }
     },
     "securitySchemes": {
-      "ApiKeyAuth": {
+      "apiKeyAuth": {
         "type": "apiKey",
         "in": "header",
         "scheme": "X-API-KEY"
