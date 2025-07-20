@@ -361,6 +361,47 @@
           }
         }
       },
+      "Post": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "description": "Unique identifier of the post",
+            "type": "integer",
+            "format": "int64"
+          },
+          "code": {
+            "description": "Internal post code",
+            "type": "string"
+          },
+          "title": {
+            "description": "Title of the changelog post",
+            "type": "string"
+          },
+          "status": {
+            "description": "Post status (DRAFT or PUBLISHED)",
+            "type": "string"
+          },
+          "content": {
+            "description": "Structured content (array of editor blocks in JSON format)",
+            "type": "string"
+          },
+          "createdAt": {
+            "description": "Timestamp when the post was created",
+            "type": "string",
+            "format": "date-time"
+          },
+          "updatedAt": {
+            "description": "Timestamp when the post was last updated",
+            "type": "string",
+            "format": "date-time"
+          },
+          "publishedAt": {
+            "description": "Timestamp when the post was published (if applicable)",
+            "type": "string",
+            "format": "date-time"
+          }
+        }
+      },
       "Error": {
         "required": [
           "error",
