@@ -48,7 +48,6 @@
       "post": {
         "description": "Creates a new project",
         "requestBody": {
-          "description": "Project for your product changelog",
           "content": {
             "application/json": {
               "schema": {
@@ -119,7 +118,41 @@
           }
         }
       },
-      "put": {},
+      "put": {
+        "description": "Update a project",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateProject"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "The updated project response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Project"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        }
+      },
       "delete": {
         "description": "Deletes a single project based on the code",
         "parameters": [
@@ -280,6 +313,43 @@
           }
         }
       },
+      "UpdateProject": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "description": "Display name of the project",
+            "type": "string"
+          },
+          "description": {
+            "description": "Short description shown on the changelog page",
+            "type": "string"
+          },
+          "logo": {
+            "description": "URL of the project logo",
+            "type": "string"
+          },
+          "theme": {
+            "description": "Visual theme of the changelog page (LIGHT, DARK, or SYSTEM)",
+            "type": "string"
+          },
+          "primaryColor": {
+            "description": "Hex color used for highlights and accents",
+            "type": "string"
+          },
+          "fontFamily": {
+            "description": "Font used on the changelog page",
+            "type": "string"
+          },
+          "fontSize": {
+            "description": "Base font size used for content (SMALL, MEDIUM, LARGE)",
+            "type": "string"
+          },
+          "customCss": {
+            "description": "Custom CSS applied to the public page",
+            "type": "string"
+          }
+        }
+      }
       "Error": {
         "required": [
           "error",
