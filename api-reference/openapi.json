@@ -21,7 +21,7 @@
         "description": "Returns all your projects from the system",
         "responses": {
           "200": {
-            "description": "Projects response",
+            "description": "List of projects response",
             "content": {
               "application/json": {
                 "schema": {
@@ -96,6 +96,28 @@
             }
           }
         ],
+        "responses": {
+          "200": {
+            "description": "The project response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Project"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        }
       },
       "put": {},
       "delete": {
