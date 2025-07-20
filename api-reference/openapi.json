@@ -202,12 +202,12 @@
           "createdAt": {
             "description": "Timestamp when the project was created",
             "type": "string",
-            "format": "date-time"
+            "format": "date"
           },
           "updatedAt": {
             "description": "Timestamp when the project was last updated",
             "type": "string",
-            "format": "date-time"
+            "format": "date"
           }
         }
       },
