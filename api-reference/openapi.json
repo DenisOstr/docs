@@ -325,7 +325,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/UpdateProject"
+                "$ref": "#/components/schemas/UpdatePost"
               }
             }
           },
