@@ -19,17 +19,6 @@
     "/project": {
       "get": {
         "description": "Returns all your projects from the system",
-        "parameters": [
-          {
-            "name": "limit",
-            "in": "query",
-            "description": "The maximum number of results to return",
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          }
-        ],
         "responses": {
           "200": {
             "description": "Projects response",
