@@ -155,10 +155,6 @@
   "components": {
     "schemas": {
       "Project": {
-        "required": [
-          "slug",
-          "name"
-        ],
         "type": "object",
         "properties": {
           "id": {
@@ -223,24 +219,24 @@
         }
       },
       "NewProject": {
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/Project"
+        "required": [
+          "name"
+        ],
+        "type": "object",
+        "properties": {
+          "name": {
+            "description": "Display name of the project",
+            "type": "string"
           },
-          {
-            "required": [
-              "id"
-            ],
-            "type": "object",
-            "properties": {
-              "id": {
-                "description": "Identification number of the plant",
-                "type": "integer",
-                "format": "int64"
-              }
-            }
+          "description": {
+            "description": "Short description shown on the changelog page",
+            "type": "string"
+          },
+          "logo": {
+            "description": "URL of the project logo",
+            "type": "string"
           }
-        ]
+        }
       },
       "Error": {
         "required": [
