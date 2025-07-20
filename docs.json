@@ -54,12 +54,12 @@
             ]
           },
           {
-            "group": "Endpoint Examples",
+            "group": "Project",
             "pages": [
-              "api-reference/endpoint/get",
-              "api-reference/endpoint/create",
-              "api-reference/endpoint/delete",
-              "api-reference/endpoint/webhook"
+              "api-reference/endpoint/project/get",
+              "api-reference/endpoint/project/get-project",
+              "api-reference/endpoint/project/create",
+              "api-reference/endpoint/project/delete",
             ]
           }
         ]
