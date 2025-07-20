@@ -201,13 +201,11 @@
           },
           "createdAt": {
             "description": "Timestamp when the project was created",
-            "type": "string",
-            "format": "date"
+            "type": "string"
           },
           "updatedAt": {
             "description": "Timestamp when the project was last updated",
             "type": "string",
-            "format": "date"
           }
         }
       },
