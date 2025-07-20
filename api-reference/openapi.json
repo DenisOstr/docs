@@ -46,7 +46,7 @@
         }
       },
       "post": {
-        "description": "Creates a new project",
+        "description": "Create a new project",
         "requestBody": {
           "content": {
             "application/json": {
@@ -165,7 +165,7 @@
         }
       },
       "delete": {
-        "description": "Deletes a single project based on the code",
+        "description": "Delete a single project based on the code",
         "parameters": [
           {
             "name": "id",
@@ -235,7 +235,46 @@
           }
         }
       },
-      "post": {}
+      "post": {
+        "description": "Create a new post",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/NewPost"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "The new post response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Post"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/post/{id}": {
+      "get": {},
+      "put": {},
+      "delete": {}
     }
   },
   "components": {
@@ -402,6 +441,32 @@
           }
         }
       },
+      "NewPost": {
+        "type": "object",
+        "required": [
+          "title",
+          "status",
+          "projectCode"
+        ],
+        "properties": {
+          "title": {
+            "description": "Title of the changelog post",
+            "type": "string"
+          },
+          "status": {
+            "description": "Post status (DRAFT or PUBLISHED)",
+            "type": "string"
+          },
+          "content": {
+            "description": "Structured content (array of editor blocks in JSON format)",
+            "type": "array"
+          },
+          "projectCode": {
+            "description": "The unique code of the project",
+            "type": "string"
+          }
+        }
+      }
       "Error": {
         "required": [
           "error",
