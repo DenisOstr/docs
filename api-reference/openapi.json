@@ -577,11 +577,21 @@
         }
       },
       "UpdatePost": {
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/NewPost"
+        "type": "object",
+        "properties": {
+          "title": {
+            "description": "Title of the changelog post",
+            "type": "string"
+          },
+          "status": {
+            "description": "Post status (DRAFT or PUBLISHED)",
+            "type": "string"
+          },
+          "content": {
+            "description": "Structured content (array of editor blocks in JSON format)",
+            "type": "array"
           }
-        ]
+        }
       },
       "Error": {
         "required": [
