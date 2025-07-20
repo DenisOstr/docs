@@ -66,11 +66,11 @@
           {
             "group": "Post",
             "pages": [
-              "api-reference/endpoint/project/get",
-              "api-reference/endpoint/project/get-project",
-              "api-reference/endpoint/project/create",
-              "api-reference/endpoint/project/update",
-              "api-reference/endpoint/project/delete"
+              "api-reference/endpoint/post/get",
+              "api-reference/endpoint/post/get-post",
+              "api-reference/endpoint/post/create",
+              "api-reference/endpoint/post/update",
+              "api-reference/endpoint/post/delete"
             ]
           }
         ]
