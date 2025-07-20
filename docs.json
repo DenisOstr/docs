@@ -59,7 +59,7 @@
               "api-reference/endpoint/project/get",
               "api-reference/endpoint/project/get-project",
               "api-reference/endpoint/project/create",
-              "api-reference/endpoint/project/delete",
+              "api-reference/endpoint/project/delete"
             ]
           }
         ]
