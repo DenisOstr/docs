@@ -93,7 +93,7 @@
         }
       }
     },
-    "/project/{code}": {
+    "/project/{id}": {
       "get": {},
       "put": {},
       "delete": {
