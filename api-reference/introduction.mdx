@@ -1,29 +1,23 @@
 ---
 title: "Introduction"
-description: "Example section for showcasing API endpoints"
+description: "Get started with the Loglybase API — build, fetch, and manage changelogs programmatically."
 ---
 
-<Note>
-  If you're not looking to build API reference documentation, you can delete
-  this section by removing the api-reference folder.
-</Note>
+## Welcome to the **Loglybase API**.
 
-## Welcome
+Our RESTful API lets you create and manage changelog content, projects, and more — all from your own applications.
 
-There are two ways to build API documentation: [OpenAPI](https://mintlify.com/docs/api-playground/openapi/setup) and [MDX components](https://mintlify.com/docs/api-playground/mdx/configuration). For the starter kit, we are using the following OpenAPI specification.
+#### What you can do with the API:
 
-<Card title="Plant Store Endpoints" icon="leaf" href="https://github.com/mintlify/starter/blob/main/api-reference/openapi.json">
-  View the OpenAPI specification file
-</Card>
+- Create and update changelog posts
+- Manage your projects and settings
+- Fetch structured changelog data
 
-## Authentication
+### Authentication
 
-All API endpoints are authenticated using Bearer tokens and picked up from the specification file.
+All API requests require a **API Token**.\
+You can generate and manage your tokens in the dashboard under **Settings → API**.
 
-```json
-"security": [
-  {
-    "bearerAuth": []
-  }
-]
+```yaml
+x-api-key: YOUR_API_KEY
 ```
