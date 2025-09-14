@@ -35,7 +35,6 @@
               "blocks/heading",
               "blocks/list",
               "blocks/code",
-              "blocks/version",
               "blocks/category",
               "blocks/divider",
               "blocks/image",
